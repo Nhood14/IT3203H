@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Assessment Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Self-Assessment Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="types.html">Types of Cookies</a></li>
+                <li><a href="usage.html">Uses of Cookies</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Test Your Knowledge</h2>
+
+        <form id="quiz-form">
+            <div class="question">
+                <h3>1. What is a session cookie?</h3>
+                <input type="radio" name="q1" value="A"> A cookie that expires when you close your browser.<br>
+                <input type="radio" name="q1" value="B"> A cookie that is stored for a set period.<br>
+                <input type="radio" name="q1" value="C"> A cookie that is used for tracking users.<br>
+            </div>
+
+            <div class="question">
+                <h3>2. Which of the following is a persistent cookie?</h3>
+                <input type="radio" name="q2" value="A"> A cookie that is deleted after browsing.<br>
+                <input type="radio" name="q2" value="B"> A cookie that stays for a set period of time.<br>
+                <input type="radio" name="q2" value="C"> A cookie that is only sent over HTTPS.<br>
+            </div>
+
+            <div class="question">
+                <h3>3. Which of the following are uses of cookies? (Select all that apply)</h3>
+                <input type="checkbox" name="q3" value="A"> Authentication<br>
+                <input type="checkbox" name="q3" value="B"> Tracking<br>
+                <input type="checkbox" name="q3" value="C"> Personalization<br>
+                <input type="checkbox" name="q3" value="D"> Only for advertising<br>
+            </div>
+
+            <div class="question">
+                <h3>4. Fill in the blank: Cookies are used for ___________ on websites.</h3>
+                <input type="text" name="q4" placeholder="Your answer">
+            </div>
+
+            <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+        </form>
+
+        <div id="results" style="display: none;">
+            <h2>Results</h2>
+            <p>Your score: <span id="score"></span></p>
+            <p id="answers"></p>
+            <p id="result"></p>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nakevia's Web Tech Project</p>
+    </footer>
+</body>
+</html>
