@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Self-Assessment Quiz</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS -->
+    <script defer src="quiz.js"></script> <!-- Link to your JS file -->
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="cookiehistory.html">Cookie History</a> |
+        <a href="quiz.html">Quiz</a> 
+    </nav>
+
+    <h1>Self-Assessment Quiz</h1>
+    
+    <form id="quizForm">
+        <div>
+            <p>1. What does a cookie store?</p>
+            <label><input type="radio" name="q1" value="correct"> User data</label><br>
+            <label><input type="radio" name="q1" value="wrong"> Images</label><br>
+            <label><input type="radio" name="q1" value="wrong"> Videos</label><br>
+        </div>
+
+        <div>
+            <p>2. What is the main purpose of cookies?</p>
+            <label><input type="radio" name="q2" value="correct"> Track user sessions</label><br>
+            <label><input type="radio" name="q2" value="wrong"> Speed up loading</label><br>
+            <label><input type="radio" name="q2" value="wrong"> Block popups</label><br>
+        </div>
+
+        <div>
+            <p>3. Cookies are stored on:</p>
+            <label><input type="radio" name="q3" value="correct"> User's computer</label><br>
+            <label><input type="radio" name="q3" value="wrong"> Server database</label><br>
+            <label><input type="radio" name="q3" value="wrong"> Cloud storage</label><br>
+        </div>
+
+        <div>
+            <p>4. Fill in the blank: Cookies help websites to _______ users.</p>
+            <input type="text" name="q4">
+        </div>
+
+        <div>
+            <p>5. Which of the following are types of cookies? (Select all that apply)</p>
+            <label><input type="checkbox" name="q5" value="correct"> Session cookies</label><br>
+            <label><input type="checkbox" name="q5" value="correct"> Persistent cookies</label><br>
+            <label><input type="checkbox" name="q5" value="wrong"> Image cookies</label><br>
+            <label><input type="checkbox" name="q5" value="wrong"> Sound cookies</label><br>
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+    </form>
+
+    <div id="result" style="margin-top: 20px;"></div>
+
+    <button onclick="restartQuiz()" style="display:none;" id="restartBtn">Restart Quiz</button>
+</body>
+</html>
