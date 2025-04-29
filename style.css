@@ -1,24 +1,29 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5fa;
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
+/* Header and Nav */
 header {
     background-color: #4b0082;
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 15px 0 0;
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -28,21 +33,48 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
     background-color: #6a0dad;
-    border-radius: 5px;
 }
 
+/* Main layout */
 main {
-    padding: 20px;
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
     display: grid;
-    gap: 20px;
+    gap: 25px;
 }
 
+/* Sections styled like cards */
+section.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Images */
+img.center-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+img.center-image:hover {
+    transform: scale(1.03);
+}
+
+/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -52,15 +84,25 @@ th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
+    background-color: #fff;
 }
 
+th {
+    background-color: #eee;
+}
+
+/* Footer */
 footer {
     background-color: #4b0082;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
+    margin-top: 40px;
 }
-/* Mobile: small screens */
+
+/* Responsive Design */
+
+/* Small Screens (Mobile) */
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;
@@ -69,6 +111,7 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 10px;
+        align-items: center;
     }
 
     img.center-image {
@@ -80,7 +123,7 @@ footer {
     }
 }
 
-/* Tablet: medium screens */
+/* Medium Screens (Tablet) */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     body {
         font-size: 16px;
@@ -95,7 +138,7 @@ footer {
     }
 }
 
-/* Desktop: large screens */
+/* Large Screens (Desktop) */
 @media screen and (min-width: 1025px) {
     body {
         font-size: 18px;
@@ -109,5 +152,21 @@ footer {
         font-size: 16px;
     }
 }
+✅ Extra: How to Use the .card Layout in Your HTML
+In index.html (or other pages), wrap sections like this:
 
+html
+Copy
+Edit
+<section class="card">
+  <h2>Summary</h2>
+  <p>Cookies are small text files websites store on your device...</p>
+</section>
 
+<section class="card">
+  <h3>Key Terms</h3>
+  <ul>
+    <li><strong>Session Cookies:</strong> ...</li>
+    ...
+  </ul>
+</section>
